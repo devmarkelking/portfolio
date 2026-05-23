@@ -1,0 +1,6 @@
+{
+  "name": "Mark Elking Portfolio",
+  "description": "Interactive developer portfolio of Mark Elking, Senior PHP & Magento 2 Developer, built with high-fidelity custom glassmorphism and a developer chatbot.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
