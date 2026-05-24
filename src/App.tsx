@@ -8,12 +8,12 @@ import Contact from './components/Contact';
 import AssistantChat from './components/AssistantChat';
 
 export default function App() {
-  const [theme, setTheme] = useState<'dark' | 'light'>('dark');
+  const [theme, setTheme] = useState<'light'>('light');
   const [activeSection, setActiveSection] = useState('home');
 
   // Load theme preference from localStorage on mount
   useEffect(() => {
-    const savedTheme = localStorage.getItem('portfolio-theme') as 'dark' | 'light';
+    const savedTheme = localStorage.getItem('portfolio-theme') as 'light';
     if (savedTheme) {
       setTheme(savedTheme);
     }

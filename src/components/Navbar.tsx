@@ -4,7 +4,7 @@ import ThemeToggle from './ThemeToggle';
 
 interface NavbarProps {
   theme: 'light';
-  setTheme: (t: 'dark' | 'light') => void;
+  setTheme: (t: 'light') => void;
   activeSection: string;
 }
 
