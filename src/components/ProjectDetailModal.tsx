@@ -5,7 +5,7 @@ import { Project } from '../types';
 interface ProjectDetailModalProps {
   project: Project | null;
   onClose: () => void;
-  theme: 'dark' | 'light';
+  theme: 'light';
 }
 
 export default function ProjectDetailModal({ project, onClose, theme }: ProjectDetailModalProps) {

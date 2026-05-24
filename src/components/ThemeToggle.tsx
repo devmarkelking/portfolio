@@ -2,8 +2,8 @@ import React from 'react';
 import { Sun, Moon, Terminal } from 'lucide-react';
 
 interface ThemeToggleProps {
-  theme: 'dark' | 'light';
-  setTheme: (t: 'dark' | 'light') => void;
+  theme: 'light';
+  setTheme: (t: 'light') => void;
 }
 
 export default function ThemeToggle({ theme, setTheme }: ThemeToggleProps) {

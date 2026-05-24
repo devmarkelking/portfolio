@@ -3,7 +3,7 @@ import { SKILL_CATEGORIES } from '../data';
 import { Terminal, Laptop, Database, Cpu, ShieldCheck } from 'lucide-react';
 
 interface SkillsProps {
-  theme: 'dark' | 'light';
+  theme: 'light';
 }
 
 export default function Skills({ theme }: SkillsProps) {

@@ -3,7 +3,7 @@ import { ArrowRight, Code, Terminal, Layers, Star } from 'lucide-react';
 import { ME_PROFILE } from '../data';
 
 interface HeroProps {
-  theme: 'dark' | 'light';
+  theme: 'light';
 }
 
 export default function Hero({ theme }: HeroProps) {

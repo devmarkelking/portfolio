@@ -5,7 +5,7 @@ import { ExternalLink, Link2, Code2, ArrowRight } from 'lucide-react';
 import ProjectDetailModal from './ProjectDetailModal';
 
 interface ProjectsProps {
-  theme: 'dark' | 'light';
+  theme: 'light';
 }
 
 export default function Projects({ theme }: ProjectsProps) {

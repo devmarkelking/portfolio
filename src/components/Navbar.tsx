@@ -3,7 +3,7 @@ import { Menu, X, ArrowUpRight } from 'lucide-react';
 import ThemeToggle from './ThemeToggle';
 
 interface NavbarProps {
-  theme: 'dark' | 'light';
+  theme: 'light';
   setTheme: (t: 'dark' | 'light') => void;
   activeSection: string;
 }

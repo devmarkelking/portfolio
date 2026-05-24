@@ -3,7 +3,7 @@ import { ME_PROFILE } from '../data';
 import { Check, Award, Compass, Zap } from 'lucide-react';
 
 interface AboutProps {
-  theme: 'dark' | 'light';
+  theme: 'light';
 }
 
 export default function About({ theme }: AboutProps) {

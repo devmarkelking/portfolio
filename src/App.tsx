@@ -20,7 +20,7 @@ export default function App() {
   }, []);
 
   // Persist theme choice details on change
-  const handleSetTheme = (newTheme: 'dark' | 'light') => {
+  const handleSetTheme = (newTheme: 'light') => {
     setTheme(newTheme);
     localStorage.setItem('portfolio-theme', newTheme);
   };
