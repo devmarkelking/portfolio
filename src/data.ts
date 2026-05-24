@@ -9,7 +9,7 @@ export const ME_PROFILE = {
   yearsExp: '7+',
   projectsCount: '10+',
   satisfaction: '100%',
-  email: 'devmarkelking@gmai.com', // following design guidelines
+  email: 'devmarkelking@gmail.com', // following design guidelines
   location: 'Manila, Philippines',
 };
 

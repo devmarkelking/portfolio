@@ -20,7 +20,7 @@ const contactInquiries: ContactInquiry[] = [
   {
     id: "setup-welcomer",
     name: "System",
-    email: "system@architect.php",
+    email: "devmarkelking@gmail.com",
     message: "Live server initialized! Enter your details above to test Mark's communication queue.",
     timestamp: new Date().toISOString(),
     status: 'Processed'

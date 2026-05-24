@@ -230,10 +230,10 @@ export default function Contact({ theme }: ContactProps) {
         <span className="text-[10px] font-mono text-slate-400 hidden">MARK_MAIL_CONTRIBUTIONS_XML</span>
       </div>
 
-      <div className="max-w-4xl mx-auto bg-white border border-slate-200 p-8 sm:p-12 rounded-none shadow-lg">
+      <div className="max-w-xl mx-auto bg-white border border-slate-200 p-8 sm:p-12 rounded-none shadow-lg">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
           
-          <div className="lg:col-span-5 space-y-6">
+          <div className="lg:col-span-12 space-y-6">
             <h3 className="font-display text-xl font-extrabold text-[#070709] tracking-tight uppercase">Let's build the future together.</h3>
             <p className="font-sans text-slate-500 text-xs sm:text-sm leading-relaxed font-normal">
               Feel free to reach out if you're looking for a developer, have a question, or simply want to connect.
@@ -268,63 +268,18 @@ export default function Contact({ theme }: ContactProps) {
               <span className="text-[#F27D26] font-extrabold block">// Active Session logs</span>
               <span>Inquiries stored: {logs.length} logged rows.</span>
             </div>
-          </div>
-
-          <div className="lg:col-span-7">
-            <form onSubmit={handleSubmit} className="space-y-5">
-              
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <div>
-                  <label className="block font-mono text-[10px] tracking-widest text-[#F27D26] font-bold uppercase mb-1">Your Name</label>
-                  <input 
-                    type="text" 
-                    value={name}
-                    onChange={(e) => setName(e.target.value)}
-                    placeholder="John Doe"
-                    required
-                    className="w-full bg-slate-50 border border-slate-200 focus:border-[#F27D26] rounded-none p-2.5 font-sans text-xs outline-none transition-colors"
-                  />
-                </div>
-                <div>
-                  <label className="block font-mono text-[10px] tracking-widest text-[#F27D26] font-bold uppercase mb-1">Email Address</label>
-                  <input 
-                    type="email" 
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                    placeholder="john@example.com"
-                    required
-                    className="w-full bg-slate-50 border border-slate-200 focus:border-[#F27D26] rounded-none p-2.5 font-sans text-xs outline-none transition-colors"
-                  />
-                </div>
-              </div>
-
-              <div>
-                <label className="block font-mono text-[10px] tracking-widest text-[#F27D26] font-bold uppercase mb-1">Your Message</label>
-                <textarea 
-                  rows={4}
-                  value={message}
-                  onChange={(e) => setMessage(e.target.value)}
-                  placeholder="Tell me about your project..."
-                  required
-                  className="w-full bg-slate-50 border border-slate-200 focus:border-[#F27D26] rounded-none p-2.5 font-sans text-xs outline-none transition-colors resize-none"
-                />
-              </div>
-
-              <button 
+            <button 
                 type="submit" 
-                disabled={isSubmitting}
-                className="w-full py-3 rounded-none bg-slate-900 hover:bg-[#F27D26] hover:text-black font-mono font-bold tracking-widest text-xs uppercase text-white transition-all cursor-pointer shadow-md shadow-slate-900/10 active:scale-[0.99] disabled:opacity-50 duration-300"
+                onClick={() =>
+                  window.location.href =
+                    `mailto:${email}?subject=Portfolio Inquiry`
+                }
+                className="w-32 py-3 rounded-none bg-slate-900 hover:bg-[#F27D26] hover:text-black font-mono font-bold tracking-widest text-xs uppercase text-white transition-all cursor-pointer shadow-md shadow-slate-900/10 active:scale-[0.99] disabled:opacity-50 duration-300"
               >
-                {isSubmitting ? 'Transmitting Inbound...' : 'Send Message'}
-              </button>
-
-              {submitResult === 'SUCCESS_DISPATCHED' && (
-                <div className="p-3 bg-green-50 border border-green-200 text-green-700 text-xs rounded-none font-sans">
-                  ✓ Dispatch logged! Mark's team has received your message.
-                </div>
-              )}
-            </form>
+                Say Hello!
+            </button>
           </div>
+
 
         </div>
       </div>

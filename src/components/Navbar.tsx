@@ -77,18 +77,6 @@ export default function Navbar({ theme, setTheme, activeSection }: NavbarProps) 
           {/* <ThemeToggle theme={theme} setTheme={setTheme} /> */}
 
           {/* Call to action button */}
-          <a
-            href="#contact"
-            onClick={(e) => { e.preventDefault(); handleScroll('#contact'); }}
-            className={`hidden lg:flex items-center gap-1 px-4 py-2 rounded-sm font-mono font-bold text-xs shadow-md transition-all border ${
-              theme === 'dark'
-                ? 'border-[#F27D26] text-[#F27D26] hover:bg-[#F27D26] hover:text-black shadow-[#F27D26]/5'
-                : 'border-slate-900 text-slate-900 hover:bg-slate-900 hover:text-white shadow-slate-900/5'
-            }`}
-          >
-            Get in Touch
-            <ArrowUpRight size={13} />
-          </a>
         </nav>
 
         {/* Mobile controls */}
