@@ -7,7 +7,7 @@ interface AboutProps {
 }
 
 export default function About({ theme }: AboutProps) {
-  const avatarUrl = "/images/pic.png";
+  const avatarUrl = "/images/black.png";
 
   if (theme === 'dark') {
     return (
