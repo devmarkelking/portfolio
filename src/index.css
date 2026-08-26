@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&family=Sora:wght@400;600;700;800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&family=Sora:wght@400;600;700;800&display=swap");
 @import "tailwindcss";
 
 @theme {
@@ -7,7 +7,7 @@
   --font-display: "Sora", sans-serif;
 
   --color-void: #050505;
-  --color-primary-accent: #F27D26;
+  --color-primary-accent: #f27d26;
   --color-primary-light: #ffa664;
   --color-secondary-accent: #171717;
   --color-secondary-light: #e5e5e5;
@@ -21,21 +21,40 @@
 @layer utilities {
   .grid-pattern {
     background-size: 50px 50px;
-    background-image: linear-gradient(to right, rgba(255, 255, 255, 0.015) 1px, transparent 1px),
-                      linear-gradient(to bottom, rgba(255, 255, 255, 0.015) 1px, transparent 1px);
+    background-image:
+      linear-gradient(
+        to right,
+        rgba(255, 255, 255, 0.015) 1px,
+        transparent 1px
+      ),
+      linear-gradient(
+        to bottom,
+        rgba(255, 255, 255, 0.015) 1px,
+        transparent 1px
+      );
     mask-image: radial-gradient(circle at center, black 40%, transparent 95%);
   }
 
   .grid-pattern-light {
     background-size: 30px 30px;
-    background-image: linear-gradient(to right, rgba(242, 125, 38, 0.03) 1px, transparent 1px),
-                      linear-gradient(to bottom, rgba(242, 125, 38, 0.03) 1px, transparent 1px);
+    background-image:
+      linear-gradient(to right, rgba(242, 125, 38, 0.03) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(242, 125, 38, 0.03) 1px, transparent 1px);
   }
 
   .mesh-gradient {
-    background: radial-gradient(at 0% 0%, rgba(242, 125, 38, 0.08) 0px, transparent 50%),
-                radial-gradient(at 100% 0%, rgba(255, 255, 255, 0.03) 0px, transparent 50%),
-                radial-gradient(at 50% 100%, rgba(242, 125, 38, 0.04) 0px, transparent 50%);
+    background:
+      radial-gradient(at 0% 0%, rgba(242, 125, 38, 0.08) 0px, transparent 50%),
+      radial-gradient(
+        at 100% 0%,
+        rgba(255, 255, 255, 0.03) 0px,
+        transparent 50%
+      ),
+      radial-gradient(
+        at 50% 100%,
+        rgba(242, 125, 38, 0.04) 0px,
+        transparent 50%
+      );
   }
 
   .glass-card {
@@ -66,7 +85,7 @@
   }
 
   .btn-primary {
-    background: #F27D26;
+    background: #f27d26;
     color: #000000;
     transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
   }
@@ -78,7 +97,9 @@
   }
 }
 
-html, body {
+html,
+body {
+  scroll-padding-top: 50px;
   scroll-behavior: smooth;
   height: 100%;
 }
@@ -100,3 +121,38 @@ html, body {
   background: #d5baff;
 }
 
+@keyframes typing-loop {
+  0% {
+    width: 0;
+  }
+  30%,
+  80% {
+    width: 100%;
+  } /* Type in by 30%, stay visible until 80% */
+  90%,
+  100% {
+    width: 0;
+  } /* Quickly disappear and wait to restart */
+}
+
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: #06b6d4;
+  }
+}
+
+.typing-effect {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 0.15em solid #06b6d4;
+  width: 0;
+  font-family: "JetBrains Mono", monospace;
+  animation:
+    typing-loop 10s steps(27, end) infinite,
+    /* 10 second cycle */ blink-caret 0.75s step-end infinite;
+}
